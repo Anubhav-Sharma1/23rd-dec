@@ -3,7 +3,7 @@ let transactions = JSON.parse(localStorage.getItem('transactions')) || [];
 
 // DOM elements for interacting with the transaction form and displaying data
 const transactionForm = document.getElementById("transaction-form"); 
-const transactionTable = document.getElementById("transaction-table").getElementsByTagName('tbody')[0];  // Corrected here
+const transactionTable = document.getElementById("transaction-table").getElementsByTagName('tbody')[0];  
 const filterCategory = document.getElementById("filter-category");
 const totalIncome = document.getElementById("total-income");
 const totalExpense = document.getElementById("total-expense");
