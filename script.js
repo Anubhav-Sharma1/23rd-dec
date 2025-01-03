@@ -118,6 +118,24 @@ transactionTable.addEventListener('click', (e) => {
     }
 });
 
+const sortDateButton = document.getElementById("sort-date");
+const sortAmountButton = document.getElementById("sort-amount");
+
+/**
+ * Sort transactions by date (newest first).
+ */
+sortDateButton.addEventListener("click", () => {
+    transactions.sort((a, b) => new Date(b.date) - new Date(a.date));
+    update(); // Refresh the table after sorting
+});
+
+/**
+ * Sort transactions by amount (highest first).
+ */
+sortAmountButton.addEventListener("click", () => {
+    transactions.sort((a, b) => b.amount - a.amount);
+    update(); // Refresh the table after sorting
+});
 
 // Initial call to update the UI with existing data on page load
 update();
